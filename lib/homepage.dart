@@ -8,16 +8,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[700],
       appBar: AppBar(
-        title: Text('TOP ALBUM'),
+        title: Text('TOP ALBUM', style: TextStyle(fontSize: 20, color: Colors.blueGrey[50]), ),
+        centerTitle: true,
+        backgroundColor: Colors.blueGrey[900],
         actions: [
           IconButton(onPressed: (){
             Navigator.pushReplacementNamed((context), '/login');
           },
-              icon: Icon(Icons.logout)
+              icon: Icon(Icons.logout),color: Colors.blueGrey[50],
           ),
         ],
-
       ),
       body: SingleChildScrollView(
         child: Column(

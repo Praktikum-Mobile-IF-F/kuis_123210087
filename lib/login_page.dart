@@ -8,10 +8,6 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        // appBar: AppBar(
-        //
-        // ),
-
         body: const LoginForm(),
       ),
     );
@@ -106,7 +102,7 @@ class _LoginFormState extends State<LoginForm> {
           .width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: isLoginSuccess ? Colors.blue : Colors.red,
+          backgroundColor: isLoginSuccess ? Colors.blue : Colors.blueGrey[600],
         ),
         onPressed: () {
           if (emailPattern.hasMatch(username) && password.length >= 8) {
@@ -131,7 +127,7 @@ class _LoginFormState extends State<LoginForm> {
             }
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('Invalid email or password format')),
+              SnackBar(content: Text('Invalid email or password')),
             );
           }
         },
